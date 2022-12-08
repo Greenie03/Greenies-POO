@@ -39,10 +39,10 @@ std::vector<Point> Point::droite(const Point &p1) {
     	Point* p = new Point(p0x,p0y);
         points.push_back(*(p));
         p0x = p0x + 1;
-        e = e + dy;
-        cout << e << endl;
+        e = e - dy;
+        
         if (e <= 0){
-            p0y = p0y - 1;
+            p0y = p0y + 1;
             e = e + dx;
         }
         delete p;
@@ -54,7 +54,7 @@ std::vector<Point> Point::droite(const Point &p1) {
 void Point::dessiner(const Point &p1,int length) {
     std::vector<Point>d = this->droite(p1);
     bool hasPoint = false;
-    for(int i=length; i >= 0; i--){
+    for(int i=0; i <= length; i++){
         for(int j=0; j < length; j++){
             if ((j == this->x && i == this->y) || (j == p1.x && i == p1.y)){
                 cout << "O ";
