@@ -12,7 +12,7 @@ T somme(vector<T> v){
 	T sum;
 	if(v.size() != 0){
 		for(int i=0; i < v.size(); i++){
-			sum += v[i];
+			sum = sum + v[i];
 		}
 	}
 	return sum;
@@ -27,10 +27,16 @@ int main(){
 	vector<Point> vp;
 	for (int i=0;i<5;i++){
 		int val = rand()%50;
+		int x = rand()% 50;
+		int y = rand()% 50;
+		Point p(x,y);
 		cout << val << endl;
 		vi.push_back(val);
+		vp.push_back(p);
 		
 	}
-	cout << somme(vi) <<endl;
+	int n = somme(vi);
+	Point s = somme(vp);
+	cout << s << endl;
 	return 0;
 }
