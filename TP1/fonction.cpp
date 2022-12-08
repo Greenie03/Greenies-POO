@@ -48,5 +48,3 @@ int majorMap(vector<int> v){
 	}
 	return b->second;
 }
-
-//Compléxité O(n*logn)
