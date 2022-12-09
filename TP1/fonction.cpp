@@ -23,10 +23,9 @@ int majorSort(vector<int> v){
 	for (int i=0; i < v.size(); i++){
 		if (c > v.size() / 2){
 			return val;
-		}else if (val != v[i+1] && c < v.size() / 2){
+		}else if (val != v[i] && c < v.size() / 2){
 			c = 0;
-			val = v[i+1];
-			
+			val = v[i];
 		}
 		c++;
 	}
@@ -46,5 +45,9 @@ int majorMap(vector<int> v){
 			b = it;
 		}
 	}
-	return b->second;
+	if(b->second > v.size() /2){
+		return b->first;
+	}else{
+		return -1;
+	}
 }
