@@ -1,0 +1,13 @@
+$TTL	60000
+@		IN	SOA	dnsnot.notascam.com. root.dnsnot.dnsnot.com. (
+			1 ; serial
+			28 ; refresh
+			14 ; retry
+			3600000 ; expire
+			60000 ; negative cache ttl
+			)
+@		IN	NS	dnsnot.notascam.com.
+smtp		IN	MX	mailnot
+www		IN	A	192.168.182.178
+mailnot		IN	A	192.168.182.180
+dnsnot		IN 	A	192.168.182.179
